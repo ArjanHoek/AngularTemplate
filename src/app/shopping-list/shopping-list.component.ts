@@ -15,4 +15,15 @@ export class ShoppingListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  addIngredient(ingredient: Ingredient) {
+    const found = this.ingredients.find((i) => i.name === ingredient.name);
+
+    if (found) {
+      found.amount += ingredient.amount;
+      return;
+    }
+
+    this.ingredients.push(ingredient);
+  }
 }

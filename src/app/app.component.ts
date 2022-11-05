@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = 'Arjan';
+  nav = {
+    currentView: 'shopping-list',
+  };
+
+  handleViewChange(view: string) {
+    this.nav.currentView = view;
+  }
 }

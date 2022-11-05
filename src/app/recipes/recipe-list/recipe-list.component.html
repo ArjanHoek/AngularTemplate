@@ -5,18 +5,7 @@
 </div>
 <div class="row">
   <div class="col-12">
-
-    <div class="list-group">
-      <a *ngFor="let recipe of recipes" href="#" class="list-group-item">
-        <div class="float-start">
-          <h4>{{ recipe.name }}</h4>
-          <p>{{ recipe.description }}</p>
-        </div>
-        <div class="float-end">
-          <img [src]="recipe.imagePath" class="rounded img-fluid" alt="{{ recipe.name }}" style="max-height: 50px">
-        </div>
-      </a>
-    </div>
-
+    <app-recipe-item (onRecipeChange)="handleRecipeChange(recipe)" *ngFor="let recipe of recipes" [recipe]="recipe">
+    </app-recipe-item>
   </div>
 </div>

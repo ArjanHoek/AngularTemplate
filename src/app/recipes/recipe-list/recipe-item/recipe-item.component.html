@@ -1,10 +1,11 @@
-<!-- <a href="#" class="list-group-item clearfix">
-  <div class="pull-left">
-    <h4 class="list-group-item-heading">{{ item.name }}</h4>
-    <p class="list-group-item-text">{{ item.description }}</p>
-  </div>
-  <div class="pull-right">
-    <img src="{{ item.imagePath }}" class="img-responsive" alt="" style="max-height: 50px">
-  </div>
-
-</a> -->
+<div class="list-group">
+  <a href="#" class="list-group-item" (click)="changeRecipe()">
+    <div class="float-start">
+      <h4>{{ recipe.name }}</h4>
+      <p>{{ recipe.description }}</p>
+    </div>
+    <div class="float-end">
+      <img [src]="recipe.imagePath" class="rounded img-fluid" alt="{{ recipe.name }}" style="max-height: 50px">
+    </div>
+  </a>
+</div>
