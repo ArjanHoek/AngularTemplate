@@ -18,7 +18,7 @@
       </button>
       <ul class="dropdown-menu">
         <li>
-          <a class="dropdown-item" href="#">To Shopping List</a>
+          <a class="dropdown-item" href="#" (click)="handleAddToShoppingList()">To Shopping List</a>
         </li>
         <li>
           <a class="dropdown-item" href="#">Add Recipe</a>
@@ -38,6 +38,17 @@
 </div>
 <div class="row">
   <div class="col-12">
-    Ingredients
+
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between" *ngFor="let ingredient of recipe.ingredients">
+        <span>
+          {{ ingredient.name }}
+        </span>
+        <span>
+          {{ ingredient.amount }}
+        </span>
+      </li>
+    </ul>
+
   </div>
 </div>
