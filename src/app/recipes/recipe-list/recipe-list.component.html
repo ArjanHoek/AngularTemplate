@@ -5,7 +5,7 @@
 </div>
 <div class="row">
   <div class="col-12">
-    <app-recipe-item (onRecipeChange)="handleRecipeChange(recipe)" *ngFor="let recipe of recipes" [recipe]="recipe">
+    <app-recipe-item *ngFor="let recipe of recipes" [recipe]="recipe">
     </app-recipe-item>
   </div>
 </div>
