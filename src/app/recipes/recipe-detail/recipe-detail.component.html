@@ -1,6 +1,10 @@
 <div class="row">
   <div class="col-12">
-    <img class="img-fluid recipe-img" [src]="recipe.imagePath" [alt]="recipe.name">
+    <img
+      class="img-fluid recipe-img"
+      [src]="recipe.imagePath"
+      [alt]="recipe.name"
+    />
   </div>
 </div>
 
@@ -18,13 +22,23 @@
       </button>
       <ul class="dropdown-menu">
         <li>
-          <a class="dropdown-item" href="#" (click)="handleAddToShoppingList()">To Shopping List</a>
+          <a
+            class="dropdown-item"
+            style="cursor: pointer"
+            (click)="handleAddToShoppingList()"
+            >To Shopping List</a
+          >
         </li>
         <li>
-          <a class="dropdown-item" href="#">Add Recipe</a>
+          <a
+            [routerLink]="['edit']"
+            class="dropdown-item"
+            style="cursor: pointer"
+            >Edit Recipe</a
+          >
         </li>
         <li>
-          <a class="dropdown-item" href="#">Delete Recipe</a>
+          <a class="dropdown-item" style="cursor: pointer">Delete Recipe</a>
         </li>
       </ul>
     </div>
@@ -38,9 +52,11 @@
 </div>
 <div class="row">
   <div class="col-12">
-
     <ul class="list-group">
-      <li class="list-group-item d-flex justify-content-between" *ngFor="let ingredient of recipe.ingredients">
+      <li
+        class="list-group-item d-flex justify-content-between"
+        *ngFor="let ingredient of recipe.ingredients"
+      >
         <span>
           {{ ingredient.name }}
         </span>
@@ -49,6 +65,5 @@
         </span>
       </li>
     </ul>
-
   </div>
 </div>

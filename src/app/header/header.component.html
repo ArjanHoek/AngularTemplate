@@ -7,20 +7,36 @@
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#" (click)="changeView('recipes')">Recipes</a>
+          <a class="nav-link" routerLinkActive="active" routerLink="/recipes"
+            >Recipes</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" (click)="changeView('shopping-list')">Shopping List</a>
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="/shopping-list"
+            >Shopping List</a
+          >
         </li>
       </ul>
-      <ul class=" navbar-nav ms-lg-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
-          <a appDropdown class="nav-link dropdown-toggle" href="#">Manage</a>
+          <a
+            appDropdown
+            class="nav-link dropdown-toggle"
+            style="cursor: pointer"
+            >Manage</a
+          >
 
           <!-- To open dropdown, toggle 'show' class -->
           <ul class="dropdown-menu end-0">
-            <li><a class="dropdown-item" href="#">Save Data</a></li>
-            <li><a class="dropdown-item" href="#">Fetch Data</a></li>
+            <li>
+              <a class="dropdown-item" style="cursor: pointer">Save Data</a>
+            </li>
+            <li>
+              <a class="dropdown-item" style="cursor: pointer">Fetch Data</a>
+            </li>
           </ul>
         </li>
       </ul>
